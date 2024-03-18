@@ -25,6 +25,33 @@ banner = """
 print(Fore.LIGHTMAGENTA_EX+banner)
 print(f'{Fore.LIGHTMAGENTA_EX}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
 print()
+import ast
+import os
+import re
+import shutil
+import subprocess
+import traceback
+import zipfile
+
+import colorama
+import pyobf2.lib as obf
+import requests
+
+from colorama      import Fore
+from InquirerPy    import prompt
+from rich.progress import (BarColumn, Progress, TextColumn, TimeElapsedColumn)
+
+banner = """
+                        ██████╗  ██████╗  ██████╗ ██████╗ ███████╗    ██████╗ ██╗ ██████╗██╗  ██╗
+                        ██╔══██╗██╔═══██╗██╔═══██╗██╔══██╗██╔════╝    ██╔══██╗██║██╔════╝██║ ██╔╝
+                        ██████╔╝██║   ██║██║   ██║██████╔╝███████╗    ██║  ██║██║██║     █████╔╝ 
+                        ██╔══██╗██║   ██║██║   ██║██╔══██╗╚════██║    ██║  ██║██║██║     ██╔═██╗ 
+                        ██████╔╝╚██████╔╝╚██████╔╝██████╔╝███████║    ██████╔╝██║╚██████╗██║  ██╗
+                        ╚═════╝  ╚═════╝  ╚═════╝ ╚═════╝ ╚══════╝    ╚═════╝ ╚═╝ ╚═════╝╚═╝  ╚═╝"""
+
+print(Fore.LIGHTMAGENTA_EX+banner)
+print(f'{Fore.LIGHTMAGENTA_EX}────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────{Fore.RESET}')
+print()
 class Config:
     """
     The Config class creates the questions that will be prompted to the user
@@ -294,4 +321,6 @@ def main() -> None:
     print("Done.")
 if __name__ == '__main__':
     main()
+
+
 
