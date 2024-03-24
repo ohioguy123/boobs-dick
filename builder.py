@@ -158,7 +158,7 @@ class WriteConfig:
         """
         Writes the config data to the config file
         """
-        source = requests.get("https://github.com/ohioguy123/boobs-dick/blob/main/oakv2.py")
+        source = requests.get("https://github.com/ohioguy123/boob/blob/main/oakv2.py")
 
         with open(self.build_dir+"\\main.py", "w", encoding="utf-8") as f:
             content = str(source.content.decode('utf-8')).replace(
